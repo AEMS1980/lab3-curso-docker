@@ -13,9 +13,9 @@ pipeline {
     timeout(time: 40, unit: 'MINUTES')
   }
   parameters {
-    string(name: 'DOCKERHUB_USER', defaultValue: '', description: 'Tu usuario real de Docker Hub, en minúsculas')
+    string(name: 'DOCKERHUB_USER', defaultValue: 'augustomartinez1980', description: 'Tu usuario real de Docker Hub, en minúsculas')
     string(name: 'APP_VERSION', defaultValue: '3.0.0', description: 'Tag adicional de versión')
-    string(name: 'KUBECTL_VERSION', defaultValue: 'v1.34.0', description: 'Ajustar a la versión del servidor: kubectl version')
+    string(name: 'KUBECTL_VERSION', defaultValue: 'v1.32.2', description: 'Ajustar a la versión del servidor: kubectl version')
   }
   environment {
     GHCR_IMAGE = 'ghcr.io/aems1980/tarea-final'
